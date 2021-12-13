@@ -1,7 +1,7 @@
 package dev.buhe;
 
 public abstract class Token {
-    public static final Token EOF=new Token(-1){};
+    public static final Token EOF = new Token(-1){};
     public static final String EOL = "\\n";
     private int lineNumber;
 

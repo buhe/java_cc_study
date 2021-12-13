@@ -20,11 +20,11 @@ public class Lexer {
 
     private Pattern pattern = Pattern.compile(regexPat);
     private ArrayList<Token> queue = new ArrayList<Token>();
-    private boolean hashMore;
+    private boolean hasMore;
     private LineNumberReader reader;
 
     public Lexer(Reader r) {
-        hashMore = true;
+        hasMore = true;
         reader = new LineNumberReader(r);
     }
 
@@ -49,7 +49,7 @@ public class Lexer {
     // 填充token队列
     private boolean fillQueue(int i) throws ParseException {
         while (i >= queue.size()) {
-            if (hashMore) {
+            if (hasMore) {
                 readLine();
             } else {
                 return false;
@@ -68,7 +68,7 @@ public class Lexer {
         }
 
         if (line == null) {
-            hashMore = false;
+            hasMore = false;
             return;
         }
 
