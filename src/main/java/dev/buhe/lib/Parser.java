@@ -16,8 +16,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Constructor;
 
 /**
- * A parser for grammatical analysis
- * Created by yangruihan on 2016/11/21.
+ * A parser for grammatical analysis from 3rd.
  */
 public class Parser {
     protected static abstract class Element {
