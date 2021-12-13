@@ -1,4 +1,4 @@
-package dev.buhe;
+package dev.buhe.lex;
 
 public abstract class Token {
     public static final Token EOF = new Token(-1){};

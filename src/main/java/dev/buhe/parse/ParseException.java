@@ -1,6 +1,8 @@
-package dev.buhe;
+package dev.buhe.parse;
 
 import java.io.IOException;
+
+import dev.buhe.lex.Token;
 
 /**
  * @desc 解析异常处理

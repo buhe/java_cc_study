@@ -1,6 +1,6 @@
 package dev.buhe.ast;
 
-import dev.buhe.Token;
+import dev.buhe.lex.Token;
 
 public class NumberLiteral extends ASTLeaf {
     public NumberLiteral(Token t) {

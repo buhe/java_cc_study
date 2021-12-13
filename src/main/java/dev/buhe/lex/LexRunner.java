@@ -1,5 +1,7 @@
-package dev.buhe;
+package dev.buhe.lex;
 
+import dev.buhe.CodeDialog;
+import dev.buhe.parse.ParseException;
 
 /**
  * @desc 测试词法分析器

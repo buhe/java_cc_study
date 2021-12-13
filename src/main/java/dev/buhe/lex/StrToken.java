@@ -1,4 +1,4 @@
-package dev.buhe;
+package dev.buhe.lex;
 
 /**
  * @desc 字符串 token

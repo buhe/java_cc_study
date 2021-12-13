@@ -6,6 +6,10 @@ import java.io.StringReader;
 
 import org.junit.Test;
 
+import dev.buhe.lex.Lexer;
+import dev.buhe.lex.Token;
+import dev.buhe.parse.ParseException;
+
 public class LexerTest {
 
     @Test

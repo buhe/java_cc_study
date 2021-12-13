@@ -1,4 +1,4 @@
-package dev.buhe;
+package dev.buhe.lex;
 
 import java.io.IOException;
 import java.io.LineNumberReader;
@@ -6,6 +6,8 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import dev.buhe.parse.ParseException;
 
 /**
  * @desc 词法分析器

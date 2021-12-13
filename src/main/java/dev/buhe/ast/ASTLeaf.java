@@ -3,7 +3,7 @@ package dev.buhe.ast;
 
 import java.util.Iterator;
 
-import dev.buhe.Token;
+import dev.buhe.lex.Token;
 
 import java.util.ArrayList;
 
