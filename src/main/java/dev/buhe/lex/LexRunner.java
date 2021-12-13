@@ -5,7 +5,6 @@ import dev.buhe.parse.ParseException;
 
 /**
  * @desc 测试词法分析器
- * @date 2020/7/14
  **/
 public class LexRunner {
     public static void main(String[] args) throws ParseException {

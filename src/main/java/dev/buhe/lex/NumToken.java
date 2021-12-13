@@ -2,7 +2,6 @@ package dev.buhe.lex;
 
 /**
  * @desc 数值 token
- * @date 2020/7/11
  **/
 public class NumToken extends Token {
     private int value;

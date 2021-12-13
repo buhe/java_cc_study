@@ -2,7 +2,6 @@ package dev.buhe.lex;
 
 /**
  * @desc 标识符 token
- * @date 2020/7/11
  **/
 public class IdToken extends Token {
     private String text;

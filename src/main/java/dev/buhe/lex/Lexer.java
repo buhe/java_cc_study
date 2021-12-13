@@ -11,7 +11,6 @@ import dev.buhe.parse.ParseException;
 
 /**
  * @desc 词法分析器
- * @date 2020/7/11
  **/
 public class Lexer {
     // pattern = 空白 + (注释 or 字符串 or 标识符)
