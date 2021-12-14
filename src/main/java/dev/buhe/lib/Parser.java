@@ -257,6 +257,7 @@ public class Parser {
             list.add(new ASTLeaf(lexer.read()));
             ASTree right = factor.parse(lexer);
             Precedence next;
+            // 结合优先级在这, 先把优先级高的构建子树
             while ((next = nextOperator(lexer)) != null
                     && rightIsExpr(prec, next))
                 right = doShift(lexer, right, next.value);
