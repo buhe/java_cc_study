@@ -21,4 +21,13 @@ public class ParserTest {
         System.out.println("=> " + ast.toString());
         assertEquals("(s = (22 + 33))", ast.toString());
     }
+
+    @Test
+    public void testIfParser() throws ParseException {
+        Lexer l = new Lexer(new StringReader("if (a > 0){}"));
+        BasicParser basicParser = new BasicParser();
+        ASTree ast = basicParser.parse(l);
+        System.out.println("=> " + ast.toString());
+        assertEquals("(if (a > 0) () else null)", ast.toString());
+    }
 }
