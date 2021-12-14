@@ -130,10 +130,10 @@ public class Parser {
         protected abstract boolean test(Token t);
     }
 
-    protected static class IdToken extends AToken {
+    protected static class IdAToken extends AToken {
         HashSet<String> reserved;
 
-        protected IdToken(Class<? extends ASTLeaf> type, HashSet<String> r) {
+        protected IdAToken(Class<? extends ASTLeaf> type, HashSet<String> r) {
             super(type);
             reserved = r != null ? r : new HashSet<String>();
         }
@@ -143,8 +143,8 @@ public class Parser {
         }
     }
 
-    protected static class NumToken extends AToken {
-        protected NumToken(Class<? extends ASTLeaf> type) {
+    protected static class NumAToken extends AToken {
+        protected NumAToken(Class<? extends ASTLeaf> type) {
             super(type);
         }
 
@@ -153,8 +153,8 @@ public class Parser {
         }
     }
 
-    protected static class StrToken extends AToken {
-        protected StrToken(Class<? extends ASTLeaf> type) {
+    protected static class StrAToken extends AToken {
+        protected StrAToken(Class<? extends ASTLeaf> type) {
             super(type);
         }
 
@@ -396,7 +396,7 @@ public class Parser {
     }
 
     public Parser number(Class<? extends ASTLeaf> clazz) {
-        elements.add(new NumToken(clazz));
+        elements.add(new NumAToken(clazz));
         return this;
     }
 
@@ -406,7 +406,7 @@ public class Parser {
 
     public Parser identifier(Class<? extends ASTLeaf> clazz,
             HashSet<String> reserved) {
-        elements.add(new IdToken(clazz, reserved));
+        elements.add(new IdAToken(clazz, reserved));
         return this;
     }
 
@@ -415,7 +415,7 @@ public class Parser {
     }
 
     public Parser string(Class<? extends ASTLeaf> clazz) {
-        elements.add(new StrToken(clazz));
+        elements.add(new StrAToken(clazz));
         return this;
     }
 
