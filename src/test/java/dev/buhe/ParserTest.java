@@ -17,7 +17,6 @@ public class ParserTest {
     public void testParser() throws ParseException {
         Lexer l = new Lexer(new StringReader("s = 22 + 33\na = 55"));
         BasicParser basicParser = new BasicParser();
-        l.peek(0);
         ASTree ast = basicParser.parse(l);
         System.out.println("=> " + ast.toString());
         assertEquals("(s = (22 + 33))", ast.toString());
