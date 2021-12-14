@@ -330,17 +330,18 @@ public class Parser {
             } catch (NoSuchMethodException e) {
             }
             try {
-                final Constructor<? extends ASTree> c
-                        = clazz.getConstructor(argType);
+                final Constructor<? extends ASTree> c = clazz.getConstructor(argType);
                 return new Factory() {
 
-        protected ASTree make0(Object arg) throws Exception {
-            return c.newInstance(arg);
+                    protected ASTree make0(Object arg) throws Exception {
+                        return c.newInstance(arg);
+                    }
+                };
+            }catch(NoSuchMethodException e) {
+                throw new RuntimeException(e);
+            }
         }
-    };}catch(NoSuchMethodException e)
-    {
-        throw new RuntimeException(e);
-    }}}
+    }
 
     protected List<Element> elements;
     protected Factory factory;
